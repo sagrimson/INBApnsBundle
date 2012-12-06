@@ -123,7 +123,7 @@ class INBApnsPushWrapper
      */
     public function pushMany(array $messages){
         if (count($messages) > 0){
-            $push = $this->createPush();
+            $push = $this->create();
             foreach($messages as $message){
                 if ($message instanceof \ApnsPHP_Message){
                     $push->add($message);
